@@ -1,31 +1,41 @@
-body{
+@font-face {
+    font-family: 'Monoton';
+    src: url('Monoton-Regular.ttf') format('truetype');
+    /* You can include more font formats here */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     background: #000;
 }
 
-.neon{
-    font-family: 'Monoton', cursive;
-    font-size:130px;
-    color: #FFD5FF;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 400;
-    letter-spacing: 8px;
-    text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+.logo {
+    filter: invert(100%) drop-shadow(1px 0px 4px #FFD5FF) drop-shadow(2px 0px 4px #FFD5FF) drop-shadow(3px 0px 4px #FFD5FF) drop-shadow(2px 0px 3px #D42CCA) drop-shadow(2px 3px 15px #D42CCA) drop-shadow(2px 0px 15px) drop-shadow(5px 0px 125px) drop-shadow(20px 0vw 200px #D42CCA) drop-shadow(40px 0vw 200px #D42CCA);
+    height: 300px;
+    width: 300px;
 }
 
-.flicker-slow{
+.neon {
+    font-family: 'Monoton', cursive;
+    font-size: 80px;
+    color: #FFD5FF;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA, 40px 0vw 200px #D42CCA;
+}
+
+.flicker-slow {
     animation: flicker 3s linear infinite;
 }
 
-.flicker-fast{
+.flicker-fast {
     animation: flicker 1s linear infinite;
 }
 
 @keyframes flicker {
     0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    //text-shadow: none;
+    / / text-shadow: none;
         opacity: .99;
 
     }
@@ -34,3 +44,16 @@ body{
     }
 }
 
+.top-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 140px 0;
+    justify-content: center;
+}
